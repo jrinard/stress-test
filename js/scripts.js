@@ -5,10 +5,10 @@ var stressTest = function(stressNumber){
     } else if ((stressNumber >=4) && (stressNumber <= 6)) {
     		stressLevel = "medium";
     } else if (stressNumber <= 3) {
-    		stressLevel = "low";
+        stressLevel = "low";
     }
+    return stressLevel;
 };
-
 
 //front end
 var displayResults = function(finalResult){
@@ -21,10 +21,9 @@ var displayResults = function(finalResult){
     }
 };
 
-$(document).ready(function(){
+$(document).ready(function() {
 
     $("button#submit").click(function(){
-      debugger
       var warnings = 0;
       var symptoms = 0;
       var coping = 0;
@@ -38,25 +37,9 @@ $(document).ready(function(){
       $("input:checkbox[name='coping']:checked").each(function(){
           coping += 2;
         });// coping
-      var stressNumber = ((warnings + symptoms) - coping);
-      stressTest(stressNumber);
-      var stressLevel = "";
+
+      var stressNumber = warnings + symptoms - coping;
+      var stressLevel = stressTest(stressNumber);
       displayResults(stressLevel);
     });// submit
 });// ready
-
-
-//
-// $("form#transportation_survey").submit(function(event){
-//   event.preventDefault();
-//   $("#work-responses, #fun-responses").show();
-//   $("input:checkbox[name=work-transportation]:checked").each(function(){ // each loops and grabs checked boxes
-//     var workTransportationMode = $(this).val();
-//     $('#work-responses').append(workTransportationMode + "<br>");
-//   }); // each close
-//   $("input:checkbox[name=fun-transportation]:checked").each(function(){
-//     var funTransportationMode = $(this).val();
-//     $('#fun-responses').append(funTransportationMode + "<br>");
-//   });
-//   $('#transportation_survey').hide();
-// });// submit
