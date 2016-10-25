@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Stress Test</title>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-3.1.1.js"></script>
+    <script src="js/scripts.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h2>Stress Test</h2>
+      </div>
+      <div id="stress-survey">
+        <div class="form-group">
+          <p>Check everything that applies to you.</p>
+          <p> I frequently...</p>
+          <input type="checkbox" name="warning-signs" value="blowup">
+                  blow up easily.<br>
+          <input type="checkbox" name="warning-signs" value="myself">
+                  try to do everything myself.<br>
+          <input type="checkbox" name="warning-signs" value="irritated">
+                  get easily erritated.<br>
+          <input type="checkbox" name="warning-signs" value="inside">
+                  keep everything inside.<br>
+          <input type="checkbox" name="warning-signs" value="waiting">
+                  get angry when I am kept waiting.<br>
+          <input type="checkbox" name="warning-signs" value="cope">
+                  feel unable to cope with all I have to do.<br>
+        </div>
+        <div class="form-group">
+          <p>Check everything that applies to you.</p>
+          <p>Do you have any of these health symptoms?</p>
+          <input type="checkbox" name="symptoms" value="headache">
+                  Headaches<br>
+          <input type="checkbox" name="symptoms" value="tension">
+                  Muscle tension or pain<br>
+          <input type="checkbox" name="symptoms" value="chest">
+                  Chest pain<br>
+          <input type="checkbox" name="symptoms" value="fatigue">
+                  Fatigue<br>
+          <input type="checkbox" name="symptoms" value="sleep">
+                  Sleep problems<br>
+          <input type="checkbox" name="symptoms" value="stomach">
+                  Upset stomach<br>
+        </div>
+
+        <div class="form-group">
+          <p>Check everything that applies to you.</p>
+          <p>Which of these stress management strategies do you employ?</p>
+          <input type="checkbox" name="coping" value="meditate">
+                  Meditate<br>
+          <input type="checkbox" name="coping" value="time">
+                  Manage your time<br>
+          <input type="checkbox" name="coping" value="exercise">
+                  Exercise<br>
+          <input type="checkbox" name="coping" value="moreSleep">
+                  Get more sleep<br>
+          <input type="checkbox" name="coping" value="fruits">
+                  Eat more fruits and vegetables<br>
+          <input type="checkbox" name="coping" value="hydration">
+                  Hydration<br>
+        </div>
+
+       <button id="submit" class="btn">Submit Survey</button>
+
+     </div>
+      <span id="survey-response-high" class="result">
+        <p>Your stress level is high!</p>
+      </span>
+      <span id="survey-response-med" class="result">
+        <p>Your stress level is average!</p>
+      </span>
+      <span id="survey-response-low" class="result">
+        <p>Your stress level is in great shape!</p>
+      </span>
+    </div>
+  </body>
+</html>
